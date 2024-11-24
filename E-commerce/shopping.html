@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-COMERCE</title>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body
+        {
+            background-color: #f4f4f9;
+            color: #fff;
+            line-height: 2rem;
+            
+        }
+        header
+        {
+            background-color: #2a0487;
+            position: fixed;
+            width: 100%;
+            align-items: center;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem 3rem;
+        }
+        nav
+        {
+            display: flex;
+            gap: 40px;
+        }
+        nav a
+        {
+            text-decoration: none;
+            color: #fff;
+            border-radius: 5px;
+        }
+        nav a:hover
+        {
+            background-color: #ff6347; 
+            transition: all ease-in-out 1s;
+            padding: 10px;
+        }
+        .nav-toggle
+        {
+            display: none;
+            background-color: #2a0487;
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            margin-left: auto;
+        }
+        .nav-toggle:focus 
+        {
+            outline: none     ;
+        }
+        .marinete
+        {
+            margin-top: 80px;
+            background: linear-gradient(to right,#ff6347,#0aec0a);
+            border: 4rem 2rem;
+            color: #f4f4f9;
+            padding: 50px;
+            text-align: center;
+        }
+        .marinete h2{
+            font-size: 3rem;
+        }
+         h3
+         {
+            color: black;
+            text-align: center;
+            padding: 20px;
+            font-size: 2rem;
+         }        
+        .products
+        {
+            margin-top: 80px;
+            border: 4rem 2rem;
+            color: #f4f4f9;   
+        }
+        .products h2
+        {
+         font-size: 2rem;
+         color: #333;
+         margin-bottom: 1.5rem;
+        }
+        .product-grid
+        {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 1.5rem;
+        }
+        .product-card
+        {
+            background-color: #fff;
+            border-radius: 50px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            height: 550px; 
+   
+        }
+        .product-card:hover
+        {
+
+            box-shadow: 0 12px 24px rgb(0, 0, 0, 0.2);
+            background-color: palevioletred;
+        }
+        .product-card img
+        {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .product-card-content
+        {
+            padding: 1rem;
+            text-align: center;
+        }
+        .product-card h3 
+        {
+            font-size: 1.4rem;
+            color:#0c0c0c;
+            margin-bottom: 0.5rem;
+        }
+        .product-card p
+        {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        .product-card .price 
+        {
+            font-size: 1.3rem;
+            color: #ff4500;
+            margin-top: 0.5rem ;
+        }
+        .product-card button
+        {
+            background-color: #ff4500;
+            color: #fff;
+            border: none;
+            padding: 0.7rem 1.3rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .product-card button:hover
+        {
+            background-color: #e63900;
+            border-radius: 20%;
+        }
+        footer
+        {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+        @media(max-width:768px)
+        {
+            .nav-toggle{
+                display: block; /
+                        }
+            nav {
+                display: none;
+                flex-direction: column;
+                gap: 0px;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #2a0487;
+                width: 100%;
+                z-index: 1000;
+
+            }
+            nav.active 
+            {
+                display: flex;
+            }
+            nav a 
+            {
+                padding: 1rem;
+                text-align: center;
+                border-bottom: 1px solid rgb(255,255,255,0);
+            }
+            .hero h2{
+                font-size: 2rem;
+            }
+            .hero p 
+            {
+                font-size: 1rem;
+            }
+            header h1 
+            {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+   <header>
+       <h1>E-Commerce store </h1> 
+       <button class="nav-toggle">&#9776;</button>                                  
+       <nav>
+        <a href="n.html">Home</a>
+        <a href="#">Product</a>
+        <a href="#">Men</a>
+        <a href="women.html">Women</a>
+        <a href="kids.html">Kids</a>
+        <a href="#">Sale</a>
+        <a href="contact.html">Contact</a>
+       </nav>
+
+   </header> 
+   <section class="marinete">
+    <h2>Discover Amazing Product</h2><br>
+    <p>Shop from variety of items at the best prices. Quality product,fast delivery<br>
+        ,and easy returns.Enkoy the best shopping</p>
+</section>
+<section class="products">
+    <h3>Our products</h3>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\shoes1.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Simple Shoes</h3>
+                <p class="price">$12.91</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\shoes2.jpeg" alt="photes">
+            <div class="product-card-content">
+                <h3>Fashion Shoes</h3>
+                <p class="price">$20.29</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\shoes3.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Ceremony Shoes</h4>
+                <p class="price">$88.70</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\shoes4.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>sport Shoes</h3>
+                <p class="price">$49.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\shoes\1.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Walking Shoes</h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\shoes\2.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Walking Shoes</h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\shoes\3.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Walking Shoes</h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\shoes\4.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Walking Shoes</h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\shoes\5.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Walking Shoes</h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\shoes\6.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Walking Shoes</h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\Women clothes\1.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Women clothes                                                                                                                                                                                                               </h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\Women clothes\3.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Women clothes</h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\Women clothes\4.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Women clothes</h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\Women clothes\5.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Women clothes</h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\Women clothes\6.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Women clothes</h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\Women clothes\7.jpeg               " alt="shoes">
+            <div class="product-card-content">
+                <h3>Women clothes</h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\kids\1.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Kids clothes</h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\kids\2.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Kids clothes</h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\kids\3.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Kids clothes</h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\kids\4.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Kids clothes</h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\kids\5.jpg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Kids clothes</h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\kids\6.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Kids clothes</h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+       
+        <div class="product-card">
+            <img src="c:\Users\kadogo\Desktop\photes\kids\8.jpeg" alt="shoes">
+            <div class="product-card-content">
+                <h3>Kids clothes</h3>
+                <p class="price">$13.O1</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <p>2024 E-Commerce store. All rights reserves                      Designed by fahadi                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             </p> 
+</footer>
+<script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu=document.querySelector('nav');
+
+    navToggle.addEventListener('click', () => {
+        navMenu.classlist.toggle('active');
+    });
+</script>
+</body>
+</html>

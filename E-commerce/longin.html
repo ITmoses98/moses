@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>longin form</title>
+    <style>
+        body
+        {
+            background-color: white;
+        }
+        fieldset
+        {
+            width: 50%;
+            height: 400px;
+            text-align: center;
+        border-radius: 20px;
+        }
+        .my
+        {
+     color: aqua;
+     background-color: red;
+     color: blue;
+        }
+        input
+        {
+           background-color: aliceblue;
+        }  
+    </style>
+</head>
+<body>
+  <fieldset>
+    <form class="my"id="faustin">
+        <label>firstname:</label><br>
+        <input type="text"name="firstname"id="firstname"><br><br>
+        <label>lastname:</label><br>
+        <input type="text"name="lastname"id="lastname"><br><br>
+        <lAbel>email:</lAbel><br>
+        <input type="email"name="email"id="email"><br><br>
+        <label>passward</label><br>
+        <input type="password"name="password"id="password"><br><br>
+        <input type="submit"value="longin"id="submit"class="d">
+        <h1><a href="News.html">If you don't have email click here and continue</a></h1>
+    </form>
+  </fieldset>
+</body>
+</html>
+<script>
+    const form=document.getElementById('faustin');
+    form.addEventListener('submit',function(event)
+{
+event.preventDefault();
+const firstname=document.getElementById('firstname').value;
+const lastname=document.getElementById('lastname').value;
+const email=document.getElementById('email').value;
+const password=document.getElementById('password').value;
+if(firstname==='NYIRINKINDI'&&lastname==='Faustin'&&email==='croix@gmail.com'&&password==='1234567890')
+{
+    window.alert("loading");
+    window.location.href='home.html';
+}
+else
+{
+    alert("invalid");
+}
+}
+);
+</script>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-COMERCE</title>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body
+        {
+            background-color: #f4f4f9;
+            color: #fff;
+            line-height: 2rem;
+            
+        }
+        header
+        {
+            background-color: #2a0487;
+            position: fixed;
+            width: 100%;
+            align-items: center;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem 3rem;
+        }
+        nav
+        {
+            display: flex;
+            gap: 40px;
+        }
+        nav a
+        {
+            text-decoration: none;
+            color: #fff;
+            border-radius: 5px;
+        }
+        nav a:hover
+        {
+            background-color: #ff6347; 
+            transition: all ease-in-out 1s;
+            padding: 10px;
+        }
+        fieldset
+        {
+            text-align:center;
+            margin: 200px;
+            background-color: #2a0487;
+            border-radius: 20px ;
+            padding: 10%;
+        }
+    </style>
+</head>
+<body>
+   <header>
+       <h1>E-Commerce store</h1>
+       <nav>
+        <a href="n.html">Home</a>
+        <a href="shopping.html">Product</a>
+        <a href="#">Men</a>
+        <a href="women.html">Women</a>
+        <a href="kids.html">Kids</a>
+        <a href="#">Sale</a>
+        <a href="#">Contact</a>
+       </nav>
+   </header> 
+   <fieldset>
+    <form id="fahadi">
+        <h1>PLEASE FILL THIS FORM TO CONTACT US</h1><br><br>
+    <label>Email:</label>
+    <input type="email"name="email"id="email"><br><br>
+    <label>send your comment</label>
+    <textarea rows="8"id="fahadishop" placeholder="Write your comment here if you want to tell us something you or you like"></textarea><br><br>
+    <input type="submit"name="fahadishop"value="send"id="submit">
+    <h2><a href="home.html"><b>START</b></a></h2>
+</form>
+</fieldset>
+</body>
+</html>
+<script>
+    const form=document.getElementById('faustin');
+    form.addEventListener('submit',function()
+    {
+        event.preventDefault();
+        const email=document.getElementById('email').value;
+        const fahadshop=document.getElementById('fahadishop').value;
+        if(email==='ImanziFahadi@gmail.com'&&fahadishop==='text')
+    {
+        alert("loading");
+        window.location.href='women.html';
+    }
+    else
+    {
+        alert
+        {
+            alert("Your SMS is successfully sent");
+            
+        }
+    }
+    }
+);
+</script>
